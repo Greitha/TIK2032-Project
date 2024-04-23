@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: #725233;
-    color: #f5f5dc;
+    background-color: #29465b;
+    color: #f8f8e7;
     padding: 20px 0;
     text-align: center;
 }
@@ -37,10 +37,11 @@ main {
 }
 
 section {
-    background-color: #f5f5dc;
+    background-color: #f8f8e7;
     padding: 20px;
     margin-bottom: 20px;
     animation: slideInFromRight 0.5s ease-in-out;
+    border-radius: 8px;
     color: #333;
     text-decoration: none
 }
@@ -113,7 +114,7 @@ hr {
 }
 
 footer {
-    background-color: #725233;
+    background-color: #29465b;
     color: #f5f5dc;
     padding: 1px;
     text-align: center;

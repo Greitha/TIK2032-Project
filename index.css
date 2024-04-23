@@ -3,11 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background: #f0f0f0 url('IndexBG.jpg') center center no-repeat;
+    background-size: cover;
 }
 
 header {
-    background-color: #725233;
-    color: #f5f5dc;
+    background-color: #29465b;
+    color: #f8f8e7;
     padding: 20px 0;
     text-align: center;
 }
@@ -38,9 +39,9 @@ main {
 }
 
 section {
-    background-color: #f5f5dc;
-    padding: 20px;
-    margin: 55px auto 1px auto;
+    background-color: #f8f8e7;
+    padding: 10px;
+    margin: 68px auto 1px auto;
     color: #333;
     text-decoration: none;
 }
@@ -48,6 +49,7 @@ section {
 .profile-section {
     flex: 0 0 auto;
     width: 15%;
+    border-radius: 8px;
 }
 
 .about-me-section {
@@ -55,12 +57,13 @@ section {
     width: 80%;
     animation: slideInFromRight 0.5s ease-in-out;
     text-align: justify;
+    border-radius: 8px;
 }
 
 .about-me-box {
     background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 5px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,16 +72,17 @@ section {
     width: 125px;
     height: 150px;
     margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-left: 30px;
     animation: zoomIn 0.5s ease-in-out;
     border-radius: 10%;
 }
 
 footer {
-    background-color: #725233;
-    color: #f5f5dc;
-    padding: 1px;
+    background-color: #29465b;
+    color: #f8f8e7;
+    font-size: smaller;
+    padding: 0.015px;
     text-align: center;
 }
 
