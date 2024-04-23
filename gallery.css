@@ -1,0 +1,205 @@
+body {
+    font-family: verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0 url('IndexBG.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #725233;
+    color: #f5f5dc;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #f5f5dc;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: slideInFromRight 0.5s ease-in-out;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.category {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category h3 {
+    color: #333;
+}
+
+/* Container untuk setiap div class */
+.nature, .family, .tennis {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+.category img:hover {
+    transform: scale(0.95); /* Menyusutkan gambar saat kursor dihover */
+    transition: transform 0.3s ease; /* Menambahkan transisi untuk efek transform */
+}
+
+/* Gambar-gambar setelah tombol "More" diklik */
+.category img:nth-of-type(n+4) {
+    width: 300px;
+    height: 250px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* memastikan modal ada di atas */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto; /* Aktifkan scroll jika konten melebihi ukuran modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.modal-controls {
+    display: none; /* Sembunyikan tombol navigasi less secara default */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal-controls button {
+    margin: 0 10px;
+}
+
+/* Tampilkan tombol navigasi less hanya saat modal ditampilkan */
+.modal-container.active .modal-controls {
+    display: flex;
+}
+
+.more-button {
+    display: block; /* Agar tombol "More" terlihat */
+    margin: 10px auto; /* Menyusun tombol "More" ke tengah */
+    padding: 10px 20px; /* Sesuaikan ukuran padding */
+    background-color: #725233; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hapus border tombol */
+    border-radius: 5px; /* Tambahkan border radius */
+    cursor: pointer; /* Tambahkan kursor pointer saat mengarah ke tombol */
+}
+
+.less-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #725233;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-button:hover,
+.less-button:hover {
+    background-color: #542a0f; /* Ubah warna latar belakang tombol saat dihover */
+}
+
+section img:nth-of-type(n+4) {
+    display: none; /* Sembunyikan gambar-gambar setelah tiga gambar pertama */
+}
+
+/* Tampilkan gambar-gambar setelah tombol "More" diklik */
+section.nature img:nth-of-type(n+4) {
+    display: block;
+}
+section.family img:nth-of-type(n+4) {
+    display: block;
+} 
+section.tennis img:nth-of-type(n+4) {
+    display: block;
+}
+
+/*atur margin untuk mempertahankan tata letak yang konsisten*/
+section.active img:nth-of-type(n+4) {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #725233;
+    color: #f5f5dc;
+    padding: 1px;
+    text-align: center;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

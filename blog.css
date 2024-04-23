@@ -1,0 +1,129 @@
+body {
+    font-family: verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0 url('IndexBG.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #725233;
+    color: #f5f5dc;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #f5f5dc;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: slideInFromRight 0.5s ease-in-out;
+    color: #333;
+    text-decoration: none
+}
+
+.article-header {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-wrapper {
+    flex: 1;
+}
+
+.image-wrapper {
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+
+.image-wrapper img {
+    height: 100%;
+    max-height: 100px;
+    width: auto;
+    display: block;
+}
+
+/* sembunyikan paragraf*/
+article p {
+    display: none;
+}
+
+article h3 {
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Stile untuk jendela artikel */
+.new-window-article {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.new-window-article h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.new-window-article p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #725233;
+    color: #f5f5dc;
+    padding: 1px;
+    text-align: center;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
