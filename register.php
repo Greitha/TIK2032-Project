@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     print_r($_POST); // Menampilkan data POST untuk debugging
-    
+
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -33,6 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             echo "Registration successful!";
+            echo "<script>
+                    localStorage.setItem('username', '$username');
+                    window.location.href = 'index.html';
+                  </script>";
         } else {
             echo "Error: " . $stmt->error;
         }

@@ -61,6 +61,39 @@
         </div>
     </div>    
 
+    <div id="welcomeModal" class="modal">
+        <span class="close" onclick="closeWelcomeModal()">&times;</span>
+        <div class="modal-content">
+            <h2>Registration Complete</h2>
+            <p id="welcomeMessage"></p>
+        </div>
+    </div>    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                showWelcomeMessage(username);
+                localStorage.removeItem('username'); // Hapus item setelah pesan ditampilkan
+            }
+        });
+    
+        function showWelcomeMessage(username) {
+            const modal = document.getElementById('welcomeModal');
+            const message = document.getElementById('welcomeMessage');
+            message.textContent = `Welcome, ${username}!`; // Set pesan selamat datang dengan nama pengguna
+            modal.style.display = 'block'; // Tampilkan jendela modul
+            setTimeout(function() {
+                modal.style.display = 'none'; // Sembunyikan jendela modul setelah beberapa detik
+            }, 3000); // Sesuaikan waktu tampilan jendela modul (dalam milidetik)
+        }
+    
+        function closeWelcomeModal() {
+            const modal = document.getElementById('welcomeModal');
+            modal.style.display = 'none'; // Sembunyikan jendela modul ketika tombol tutup diklik
+        }
+    </script>    
+
     <script src="sidebar.js"></script>
     <script src="script.js"></script>
 </body>
