@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sidebar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Welcome To My Personal Homepage</h1>
+        <button class="openbtn" onclick="openSidebar()">☰</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,6 +20,10 @@
             </ul>
         </nav>
     </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a href="#" onclick="openModal('registerModal')">Register</a>
+    </div>
     <main>
         <section class="profile-section">
             <img src="fotoProfil.jpg" alt="Foto Profil" class="profile-pic">
@@ -36,8 +41,27 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>© Greitha Pelealu</p>
+    </footer>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Register</h2>
+            <form action="register.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>            
+        </div>
+    </div>    
+
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
 </body>
-<footer>
-    <p>© Greitha Pelealu</p>
-</footer>
 </html>

@@ -1,7 +1,8 @@
 // JavaScript untuk Home page (index.html)
-if (document.URL.includes("index.html")) {
-    console.log("This is the Home page.");
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
 }
+
 
 // JavaScript untuk Gallery page (gallery.html)
 if (document.URL.includes("gallery.html")) {
@@ -119,7 +120,7 @@ if (document.URL.includes("blog.html")) {
             if (articleContent) {
                 const contentHTML = articleContent.innerHTML;
                 const newWindow = window.open("", "_blank", "width=1000,height=1000");
-                const imageSrc = article.querySelector(".image-wrapper img").getAttribute("src") || "path/to/default/image.jpghttps://scontent.fmdc6-1.fna.fbcdn.net/v/t39.30808-6/232865917_4736546029707491_6718421868996800598_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=T9Pzzo-cXQoAb721zKc&_nc_ht=scontent.fmdc6-1.fna&oh=00_AfDvXOhWUrZ4mj66PYEGDNOY12TSm4ETcJ8s8m1E1sOUgA&oe=662BFE09";
+                const imageSrc = article.querySelector(".image-wrapper img").getAttribute("src") || "path/to/default/image.jpg";
 
                 newWindow.document.write(`
                     <html>
@@ -174,12 +175,12 @@ if (document.URL.includes("blog.html")) {
     });
 }
 
-// JavaScript untuk Contact page (contact.html)
-if (document.URL.includes("contact.html")) {
-    console.log("This is the Contact page.");
-    
-    const whatsappLink = document.getElementById("whatsapp-link");
-    whatsappLink.addEventListener("click", () => {
-        console.log("WhatsApp icon clicked!");
-    });
+    // JavaScript untuk Contact page (contact.html)
+    if (document.URL.includes("contact.html")) {
+        console.log("This is the Contact page.");
+        
+        const whatsappLink = document.getElementById("whatsapp-link");
+        whatsappLink.addEventListener("click", () => {
+            console.log("WhatsApp icon clicked!");
+        });
 }
